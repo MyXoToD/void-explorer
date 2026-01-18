@@ -1,0 +1,11 @@
+<div class="navigation">
+  @for (link of links; track link) {
+    <a
+      class="navigation__link"
+      routerLink="{{ link.href }}"
+      routerLinkActive="navigation__link--active"
+    >
+      {{ link.label }}
+    </a>
+  }
+</div>

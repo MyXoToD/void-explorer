@@ -1,0 +1,18 @@
+:host {
+  display: contents;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  &__link {
+    padding: 0.5rem;
+    display: block;
+
+    &--active {
+      background-color: #ccc;
+    }
+  }
+}
