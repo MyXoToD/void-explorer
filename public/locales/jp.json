@@ -1,0 +1,25 @@
+{
+  "game": {
+    "title": "ボイドエクスプローラ"
+  },
+  "settings": {
+    "title": "設定",
+    "sections": {
+      "general": "一般的に"
+    },
+    "language": {
+      "label": "言語"
+    },
+    "vibration": {
+      "label": "振動"
+    }
+  },
+  "translation": {
+    "missingTranslation": "翻訳ありません"
+  },
+  "languages": {
+    "en": "English",
+    "de": "Deutsch",
+    "jp": "日本語"
+  }
+}

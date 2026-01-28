@@ -1,0 +1,25 @@
+{
+  "game": {
+    "title": "Void Explorer"
+  },
+  "settings": {
+    "title": "Settings",
+    "sections": {
+      "general": "General"
+    },
+    "language": {
+      "label": "Language"
+    },
+    "vibration": {
+      "label": "Vibration"
+    }
+  },
+  "translation": {
+    "missingTranslation": "Missing Translation"
+  },
+  "languages": {
+    "en": "English",
+    "de": "Deutsch",
+    "jp": "日本語"
+  }
+}

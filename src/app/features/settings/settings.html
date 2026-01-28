@@ -1,1 +1,56 @@
-<p>settings works!</p>
+<h1>{{ 'settings.title' | translate }}</h1>
+
+<div class="settings">
+  <div class="settings__section">
+    <h2>{{ 'settings.sections.general' | translate }}</h2>
+
+    <div class="setting">
+      <label for="setting-language" class="setting__label">{{
+        'settings.language.label' | translate
+      }}</label>
+      <select id="setting-language" (change)="changeLanguage($event)">
+        @for (language of languages; track language) {
+          <option value="{{ language }}" [selected]="currentLanguage == language">
+            {{ `languages.${language}` | translate }}
+          </option>
+        }
+      </select>
+    </div>
+
+    <ul>
+      <li>Google Login</li>
+      <li>Save Game</li>
+      <li>Load Game</li>
+    </ul>
+  </div>
+
+  <div class="settings__section">
+    <h2>Audio</h2>
+
+    <div class="setting">
+      <label for="setting-vibration" class="setting__label">
+        {{ 'settings.vibration.label' | translate }}
+      </label>
+      <input
+        type="checkbox"
+        id="setting-vibration"
+        [checked]="state.settings().vibration"
+        (change)="changeVibration()"
+      />
+    </div>
+
+    <ul>
+      <li>Music On/Off</li>
+      <li>SFX On/Off</li>
+      <li>Vibrate On/Off</li>
+    </ul>
+  </div>
+
+  <div class="settings__section">
+    <h2>Danger Zone</h2>
+
+    <ul>
+      <li>Hard Reset</li>
+    </ul>
+  </div>
+</div>

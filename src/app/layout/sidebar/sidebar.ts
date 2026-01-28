@@ -1,13 +1,22 @@
 import { Component, inject } from '@angular/core';
+import { TranslatePipe } from '@ngx-translate/core';
 import { GameState } from '../../shared/game-state';
 import { Navigation } from '../navigation/navigation';
 
 @Component({
   selector: 've-sidebar',
-  imports: [Navigation],
+  imports: [Navigation, TranslatePipe],
   templateUrl: './sidebar.html',
   styleUrl: './sidebar.scss',
 })
 export class Sidebar {
   protected readonly state = inject(GameState);
+
+  earnCredits() {
+    this.state.earnCredits(1000);
+  }
+
+  spendCredits() {
+    this.state.spendCredits(1000);
+  }
 }

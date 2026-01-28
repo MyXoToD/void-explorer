@@ -1,5 +1,9 @@
-<h1>Void Explorer</h1>
+<div class="sidebar">
+  <h1>{{ 'game.title' | translate }}</h1>
 
-<p>Credits: {{ state.credits() }}</p>
+  <p>Credits: {{ state.credits() }}</p>
+  <button (click)="earnCredits()">Earn Credits</button>
+  <button (click)="spendCredits()">Earn Credits</button>
 
-<ve-navigation></ve-navigation>
+  <ve-navigation></ve-navigation>
+</div>

@@ -5,7 +5,7 @@
       routerLink="{{ link.href }}"
       routerLinkActive="navigation__link--active"
     >
-      {{ link.label }}
+      <fa-icon [icon]="link.icon"></fa-icon> {{ link.label }}
     </a>
   }
 </div>

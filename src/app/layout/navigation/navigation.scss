@@ -12,7 +12,7 @@
     display: block;
 
     &--active {
-      background-color: #ccc;
+      background-color: var(--c-elevation-1);
     }
   }
 }

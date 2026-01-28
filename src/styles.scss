@@ -1,4 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --c-elevation-0: #121418;
+  --c-elevation-1: hsl(220, 14%, 13%);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,4 +13,18 @@
 html,
 body {
   height: 100vh;
+  background-color: var(--c-elevation-0);
+  color: #ccc;
+  font-family: sans-serif;
+}
+
+button,
+select,
+input,
+textarea,
+a {
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  background-color: inherit;
 }
