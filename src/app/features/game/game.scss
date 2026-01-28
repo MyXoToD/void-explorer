@@ -4,14 +4,58 @@
   height: 100%;
   background-color: skyblue;
 
+  &--launched {
+    .rocket {
+      animation: launchRocket 3s linear forwards;
+    }
+
+    .ground {
+      animation: groundMove 3s linear forwards;
+    }
+  }
+
+  .launch {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    cursor: pointer;
+    padding: 2rem;
+    background-color: #000;
+  }
+
   .rocket {
+    position: absolute;
     width: 20px;
     height: 20px;
     background-color: black;
-    position: absolute;
     bottom: 33%;
     left: 50%;
     transform: translateX(-50%);
+
+    span {
+      position: absolute;
+      display: block;
+      width: 2px;
+      height: 10px;
+      background-color: red;
+      bottom: -10px;
+
+      &:nth-child(1) {
+        left: 6px;
+        transform: rotate(20deg);
+      }
+
+      &:nth-child(2) {
+        left: 9px;
+      }
+
+      &:nth-child(3) {
+        left: 12px;
+        transform: rotate(-20deg);
+      }
+    }
   }
 
   .ground {
@@ -20,5 +64,20 @@
     background-color: green;
     width: 100%;
     height: 33%;
+  }
+}
+
+@keyframes launchRocket {
+  0% {
+    bottom: 33%;
+  }
+  100% {
+    bottom: 50%;
+  }
+}
+
+@keyframes groundMove {
+  100% {
+    height: 0;
   }
 }

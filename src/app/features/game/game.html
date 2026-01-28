@@ -1,4 +1,11 @@
-<div class="game">
-  <div class="rocket"></div>
+<div class="game" [ngClass]="{ 'game--launched': launched }">
+  @if (!launched) {
+    <button class="launch" (click)="launchRocket()">Launch Rocket</button>
+  }
+  <div class="rocket">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
   <div class="ground"></div>
 </div>
