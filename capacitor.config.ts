@@ -1,0 +1,9 @@
+import type { CapacitorConfig } from '@capacitor/cli';
+
+const config: CapacitorConfig = {
+  appId: 'dev.makkusu.void_explorer',
+  appName: 'Void Explorer',
+  webDir: 'dist/void-explorer/browser',
+};
+
+export default config;
