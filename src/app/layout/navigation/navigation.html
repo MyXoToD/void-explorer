@@ -4,8 +4,9 @@
       class="navigation__link"
       routerLink="{{ link.href }}"
       routerLinkActive="navigation__link--active"
+      style="--mobile-order: {{ link.mobileOrder }}"
     >
-      <fa-icon [icon]="link.icon"></fa-icon> {{ link.label }}
+      <fa-icon [icon]="link.icon"></fa-icon><span>{{ link.label }}</span>
     </a>
   }
 </div>

@@ -16,6 +16,7 @@
 
   .launch {
     position: absolute;
+    z-index: 1;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -27,9 +28,11 @@
 
   .rocket {
     position: absolute;
+    z-index: 1;
     width: 20px;
     height: 20px;
     background-color: black;
+    border: 1px solid white;
     bottom: 33%;
     left: 50%;
     transform: translateX(-50%);
@@ -60,10 +63,40 @@
 
   .ground {
     position: absolute;
+    z-index: 2;
     bottom: 0;
     background-color: green;
     width: 100%;
     height: 33%;
+  }
+
+  .stars {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+
+    div {
+      width: 1px;
+      height: 1px;
+      background-color: #fff;
+      position: absolute;
+      top: calc(100% * var(--y));
+      left: calc(100% * var(--x));
+      animation-name: sparkle, moveStars;
+      animation-duration: 5s, 10s;
+      animation-delay: calc(3s * var(--d)), calc(10s * var(--d));
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+  }
+
+  .height {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
   }
 }
 
@@ -79,5 +112,21 @@
 @keyframes groundMove {
   100% {
     height: 0;
+  }
+}
+
+@keyframes sparkle {
+  45%,
+  55% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes moveStars {
+  to {
+    top: 100%;
   }
 }

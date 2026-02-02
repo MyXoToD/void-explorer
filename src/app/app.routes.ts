@@ -3,12 +3,12 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'dashboard',
+    redirectTo: 'launch',
     pathMatch: 'full',
   },
   {
-    path: 'dashboard',
-    loadComponent: () => import('./features/dashboard/dashboard').then((c) => c.Dashboard),
+    path: 'launch',
+    loadComponent: () => import('./features/launch/launch').then((c) => c.Launch),
   },
   {
     path: 'game',
@@ -20,6 +20,6 @@ export const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: 'dashboard',
+    redirectTo: 'launch',
   },
 ];

@@ -1,4 +1,4 @@
-<div class="game" [ngClass]="{ 'game--launched': launched }">
+<div class="game" [ngClass]="{ 'game--launched': launched }" [style.background-color]="skyColor()">
   @if (!launched) {
     <button class="launch" (click)="launchRocket()">Launch Rocket</button>
   }
@@ -8,4 +8,12 @@
     <span></span>
   </div>
   <div class="ground"></div>
+
+  <div class="stars" [style.opacity]="starsOpacity()">
+    @for (star of stars; track star) {
+      <div class="star" style="--x: {{ star.x }}; --y: {{ star.y }}; --d: {{ star.d }};"></div>
+    }
+  </div>
+
+  <div class="height">{{ currentHeight() }}m</div>
 </div>

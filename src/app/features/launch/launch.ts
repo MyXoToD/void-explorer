@@ -3,12 +3,12 @@ import { Router } from '@angular/router';
 import { Vibrate } from '../../shared/directives/vibrate';
 
 @Component({
-  selector: 've-dashboard',
+  selector: 've-launch',
   imports: [Vibrate],
-  templateUrl: './dashboard.html',
-  styleUrl: './dashboard.scss',
+  templateUrl: './launch.html',
+  styleUrl: './launch.scss',
 })
-export class Dashboard {
+export class Launch {
   private readonly _router = inject(Router);
 
   startRun() {

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { FaIconComponent } from '@fortawesome/angular-fontawesome';
 import { NavigationLink } from './models/navigation-link.interface';
-import { FaIconComponent } from "@fortawesome/angular-fontawesome";
 
 @Component({
   selector: 've-navigation',
@@ -12,29 +12,34 @@ import { FaIconComponent } from "@fortawesome/angular-fontawesome";
 export class Navigation {
   links: NavigationLink[] = [
     {
-      label: 'Dashboard',
-      href: 'dashboard',
-      icon: 'house',
+      label: 'Launch',
+      href: 'launch',
+      icon: 'rocket',
+      mobileOrder: 3,
     },
     {
       label: 'Upgrades',
       href: 'upgrades',
-      icon: 'house',
+      icon: 'circle-arrow-up',
+      mobileOrder: 2,
     },
     {
       label: 'Research',
       href: 'research',
-      icon: 'house',
+      icon: 'flask',
+      mobileOrder: 1,
     },
     {
       label: 'Achievements',
       href: 'achievements',
-      icon: 'house',
+      icon: 'trophy',
+      mobileOrder: 4,
     },
     {
       label: 'Settings',
       href: 'settings',
-      icon: 'house',
+      icon: 'gear',
+      mobileOrder: 5,
     },
   ];
 }

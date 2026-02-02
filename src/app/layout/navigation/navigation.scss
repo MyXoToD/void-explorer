@@ -15,4 +15,27 @@
       background-color: var(--c-elevation-1);
     }
   }
+
+  @media screen and (max-width: 768px) {
+    grid-area: navigation;
+
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+
+    &__link {
+      height: 100%;
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      order: var(--mobile-order);
+      // aspect-ratio: 1 / 1;
+
+      span {
+        display: none;
+      }
+    }
+  }
 }

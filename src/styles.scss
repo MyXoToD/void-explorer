@@ -1,6 +1,9 @@
 :root {
   --c-elevation-0: #121418;
   --c-elevation-1: hsl(220, 14%, 13%);
+
+  --topbar-height: 60px;
+  --navigation-height: 60px;
 }
 
 * {
@@ -31,4 +34,8 @@ a {
 
 a {
   text-decoration: none;
+}
+
+.page {
+  padding: 1rem;
 }
