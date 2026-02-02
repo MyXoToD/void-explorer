@@ -1,5 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { Fullscreen } from '@boengli/capacitor-fullscreen';
+import { ScreenOrientation } from '@capacitor/screen-orientation';
 import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {
   faCircleArrowUp,
@@ -22,6 +24,9 @@ export class App {
   library = inject(FaIconLibrary);
 
   constructor() {
+    Fullscreen.activateImmersiveMode();
+    ScreenOrientation.lock({ orientation: 'portrait' });
+
     this.library.addIcons(faRocket, faCircleArrowUp, faFlask, faTrophy, faGear);
     this._translate.addLangs(['en', 'de', 'jp']);
     this._translate.setFallbackLang('en');

@@ -7,6 +7,7 @@ const config: CapacitorConfig = {
   plugins: {
     SplashScreen: {
       splashImmersive: true, // Hide Status and Navigation Bars
+      spashFullScreen: true, // Enable Fullscreen Splash Screen
     },
   },
 };
