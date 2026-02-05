@@ -17,6 +17,10 @@ export class GameState {
     vibration: true,
   });
   settings = this._settings.asReadonly();
+  private _currentRun = signal<any>({
+    started: false,
+  });
+  currentRun = this._currentRun.asReadonly();
 
   earnCredits(amount: number) {
     this._credits.update((current) => current + amount);
@@ -28,5 +32,9 @@ export class GameState {
 
   updateSettings(newSettings: Partial<GameSettings>) {
     this._settings.update((current) => ({ ...current, ...newSettings }));
+  }
+
+  updateCurrentRun(newRun: Partial<any>) {
+    this._currentRun.update((current) => ({ ...current, ...newRun }));
   }
 }

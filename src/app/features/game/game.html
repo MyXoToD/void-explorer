@@ -1,7 +1,11 @@
+<div class="countdown">
+  <span>3</span>
+  <span>2</span>
+  <span>1</span>
+  <span>Lift off!</span>
+</div>
+
 <div class="game" [ngClass]="{ 'game--launched': launched }" [style.background-color]="skyColor()">
-  @if (!launched) {
-    <button class="launch" (click)="launchRocket()">Launch Rocket</button>
-  }
   <div class="rocket">
     <span></span>
     <span></span>
