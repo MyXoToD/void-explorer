@@ -1,0 +1,8 @@
+<div class="topbar">
+  @if (state.currentRun().started) {
+    In run
+  } @else {
+    <h1>{{ 'game.title' | translate }}</h1>
+    <p>Credits: {{ state.credits() }}</p>
+  }
+</div>

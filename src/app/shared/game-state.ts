@@ -18,7 +18,8 @@ export class GameState {
   });
   settings = this._settings.asReadonly();
   private _currentRun = signal<any>({
-    started: false,
+    active: false,
+    launched: false,
   });
   currentRun = this._currentRun.asReadonly();
 

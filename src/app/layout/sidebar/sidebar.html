@@ -1,11 +1,4 @@
 <div class="sidebar">
-  <div class="topbar">
-    <h1>{{ 'game.title' | translate }}</h1>
-
-    <p>Credits: {{ state.credits() }}</p>
-    <button (click)="earnCredits()">Earn Credits</button>
-    <button (click)="spendCredits()">Earn Credits</button>
-  </div>
-
+  <ve-topbar></ve-topbar>
   <ve-navigation></ve-navigation>
 </div>

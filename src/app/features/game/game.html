@@ -5,7 +5,11 @@
   <span>Lift off!</span>
 </div>
 
-<div class="game" [ngClass]="{ 'game--launched': launched }" [style.background-color]="skyColor()">
+<div
+  class="game"
+  [ngClass]="{ 'game--launched': launched() }"
+  [style.background-color]="skyColor()"
+>
   <div class="rocket">
     <span></span>
     <span></span>

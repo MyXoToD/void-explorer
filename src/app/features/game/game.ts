@@ -1,5 +1,6 @@
 import { NgClass } from '@angular/common';
-import { Component, effect, inject, OnInit, signal } from '@angular/core';
+import { Component, effect, inject, OnDestroy, OnInit, signal } from '@angular/core';
+import { hapticsImpactLight, hapticsImpactMedium } from '../../shared/directives/haptics';
 import { GameState } from '../../shared/game-state';
 
 @Component({
@@ -8,28 +9,33 @@ import { GameState } from '../../shared/game-state';
   templateUrl: './game.html',
   styleUrl: './game.scss',
 })
-export class Game implements OnInit {
+export class Game implements OnInit, OnDestroy {
   private _state = inject(GameState);
 
   currentHeight = signal<number>(0);
   skyColor = signal<string>('hsl(197, 71%, 73%)');
   starsOpacity = signal<number>(0);
+  launched = signal<boolean>(false);
   stars = Array.from({ length: 100 }, () => ({
     x: Math.random(),
     y: Math.random(),
     d: Math.random(),
   }));
   spaceAt = 2000; //100_000; // Height at which space starts
-  launched = false;
 
   constructor() {
+    this.launched.set(false);
     effect(() => {
-      this.launched = this._state.currentRun().started;
+      this.launched.set(this._state.currentRun().started);
     });
   }
 
   ngOnInit() {
     this.startCountdown();
+  }
+
+  ngOnDestroy(): void {
+    this._state.updateCurrentRun({ started: false });
   }
 
   startCountdown() {
@@ -39,9 +45,11 @@ export class Game implements OnInit {
     const interval = setInterval(() => {
       if (currentIndex < countdownElements.length) {
         countdownElements[currentIndex].classList.add('active');
+        hapticsImpactLight();
         currentIndex++;
       } else {
         console.log('Countdown finished');
+        hapticsImpactMedium();
         clearInterval(interval);
         this.launchRocket();
       }

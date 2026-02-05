@@ -1,6 +1,7 @@
 {
   "game": {
-    "title": "ボイドエクスプローラ"
+    "title": "ボイドエクスプローラ",
+    "launchRocket": "ロケットスタート"
   },
   "settings": {
     "title": "設定",

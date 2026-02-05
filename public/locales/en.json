@@ -1,6 +1,7 @@
 {
   "game": {
-    "title": "Void Explorer"
+    "title": "Void Explorer",
+    "launchRocket": "Launch Rocket"
   },
   "settings": {
     "title": "Settings",
