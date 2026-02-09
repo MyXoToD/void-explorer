@@ -1,5 +1,6 @@
 import { Haptics, ImpactStyle } from '@capacitor/haptics';
 
+// TODO: Check settings for vibration (maybe restructure as service class)
 export const hapticsImpactMedium = async () => {
   await Haptics.impact({ style: ImpactStyle.Medium });
 };

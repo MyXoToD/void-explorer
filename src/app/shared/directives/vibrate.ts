@@ -10,8 +10,8 @@ export class Vibrate {
 
   @HostListener('click')
   onClick() {
-    if (navigator.vibrate && this._state.settings().vibration) {
-      navigator.vibrate(50);
+    if (this._state.settings().vibration) {
+      // navigator.vibrate(50);
       hapticsImpactMedium();
     }
   }

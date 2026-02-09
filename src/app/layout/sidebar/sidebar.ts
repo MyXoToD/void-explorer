@@ -1,12 +1,11 @@
 import { Component, inject } from '@angular/core';
-import { TranslatePipe } from '@ngx-translate/core';
 import { GameState } from '../../shared/game-state';
 import { Navigation } from '../navigation/navigation';
 import { Topbar } from '../topbar/topbar';
 
 @Component({
   selector: 've-sidebar',
-  imports: [Navigation, TranslatePipe, Topbar],
+  imports: [Navigation, Topbar],
   templateUrl: './sidebar.html',
   styleUrl: './sidebar.scss',
 })

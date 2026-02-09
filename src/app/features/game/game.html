@@ -1,19 +1,38 @@
-<div class="countdown">
-  <span>3</span>
-  <span>2</span>
-  <span>1</span>
-  <span>Lift off!</span>
-</div>
-
 <div
   class="game"
   [ngClass]="{ 'game--launched': launched() }"
   [style.background-color]="skyColor()"
 >
+  <div class="countdown">
+    <span>3</span>
+    <span>2</span>
+    <span>1</span>
+    <span>Lift off!</span>
+  </div>
+  <!-- <div class="rocket">
+  <span></span>
+    <span></span>
+    <span></span>
+  </div> -->
   <div class="rocket">
-    <span></span>
-    <span></span>
-    <span></span>
+    <div class="rocket-body">
+      <div class="body"></div>
+      <div class="fin fin-left"></div>
+      <div class="fin fin-right"></div>
+      <div class="window"></div>
+    </div>
+    <div class="exhaust-flame"></div>
+    <ul class="exhaust-fumes">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
   </div>
   <div class="ground"></div>
 
@@ -23,5 +42,5 @@
     }
   </div>
 
-  <div class="height">{{ currentHeight() }}m</div>
+  <div class="fuel" [style.--fuel]="fuelPercent"></div>
 </div>

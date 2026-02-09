@@ -20,6 +20,8 @@ export class GameState {
   private _currentRun = signal<any>({
     active: false,
     launched: false,
+    distance: 0,
+    speed: 0,
   });
   currentRun = this._currentRun.asReadonly();
 
