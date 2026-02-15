@@ -16,11 +16,35 @@
     }
   },
   "translation": {
-    "missingTranslation": "Missing Translation"
+    "missingTranslation": "Missing translation"
   },
   "languages": {
     "en": "English",
-    "de": "Deutsch",
-    "jp": "日本語"
+    "de": "German",
+    "jp": "Japanese"
+  },
+  "upgrades": {
+    "rocket": "Rocket",
+    "attack": "Attack",
+    "defense": "Defense",
+    "economy": "Economy"
+  },
+  "upgrade": {
+    "mass_reduction": {
+      "name": "Mass Reduction",
+      "description": "Reduces the mass of your rocket, allowing for faster acceleration and higher top speed."
+    },
+    "fuel_efficiency": {
+      "name": "Fuel Efficiency",
+      "description": "Improves the fuel efficiency of your rocket, allowing you to travel further on the same amount of fuel."
+    },
+    "fuel_weight": {
+      "name": "Fuel Weight",
+      "description": "Reduces the weight of your fuel, allowing you to carry more fuel without increasing the mass of your rocket."
+    },
+    "fuel_capacity": {
+      "name": "Fuel Capacity",
+      "description": "Increases the fuel capacity of your rocket, allowing you to carry more fuel and travel further."
+    }
   }
 }

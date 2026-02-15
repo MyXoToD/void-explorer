@@ -15,6 +15,10 @@ export const routes: Routes = [
     loadComponent: () => import('./features/game/game').then((c) => c.Game),
   },
   {
+    path: 'upgrades',
+    loadComponent: () => import('./features/upgrades/upgrades').then((c) => c.Upgrades),
+  },
+  {
     path: 'settings',
     loadComponent: () => import('./features/settings/settings').then((c) => c.Settings),
   },

@@ -1,0 +1,46 @@
+<div class="upgrades">
+  @for (upgrade of visibleUpgrades; track upgrade) {
+    <div class="upgrade">
+      <div class="upgrade__name">{{ 'upgrade.' + upgrade.id + '.name' | translate }}</div>
+      <button
+        class="upgrade__buy"
+        [disabled]="!canBuyUpgrade(upgrade)"
+        (click)="buyUpgrade(upgrade)"
+      >
+        <div class="upgrade__bonus">{{ upgrade.level }}</div>
+        <div class="upgrade__cost">{{ formatPrice(getPrice(upgrade)) }}</div>
+      </button>
+    </div>
+  }
+
+  <div class="upgrades__menu">
+    <button
+      class="upgrades__menu-button"
+      [ngClass]="{ 'upgrades__menu-button--active': activeMenu == 'rocket' }"
+      (click)="setMenu('rocket')"
+    >
+      {{ 'upgrades.rocket' | translate }}
+    </button>
+    <button
+      class="upgrades__menu-button"
+      [ngClass]="{ 'upgrades__menu-button--active': activeMenu == 'attack' }"
+      (click)="setMenu('attack')"
+    >
+      {{ 'upgrades.attack' | translate }}
+    </button>
+    <button
+      class="upgrades__menu-button"
+      [ngClass]="{ 'upgrades__menu-button--active': activeMenu == 'defense' }"
+      (click)="setMenu('defense')"
+    >
+      {{ 'upgrades.defense' | translate }}
+    </button>
+    <button
+      class="upgrades__menu-button"
+      [ngClass]="{ 'upgrades__menu-button--active': activeMenu == 'economy' }"
+      (click)="setMenu('economy')"
+    >
+      {{ 'upgrades.economy' | translate }}
+    </button>
+  </div>
+</div>

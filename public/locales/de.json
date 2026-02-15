@@ -22,5 +22,29 @@
     "en": "English",
     "de": "Deutsch",
     "jp": "日本語"
+  },
+  "upgrades": {
+    "rocket": "Rakete",
+    "attack": "Angriff",
+    "defense": "Verteidigung",
+    "economy": "Wirtschaft"
+  },
+  "upgrade": {
+    "mass_reduction": {
+      "name": "Massenreduktion",
+      "description": "Reduziert die Masse deiner Rakete, was eine schnellere Beschleunigung und höhere Höchstgeschwindigkeit ermöglicht."
+    },
+    "fuel_efficiency": {
+      "name": "Kraftstoffeffizienz",
+      "description": "Verbessert die Kraftstoffeffizienz deiner Rakete, sodass du auf dem gleichen Kraftstoffvolumen weiter fahren kannst."
+    },
+    "fuel_weight": {
+      "name": "Kraftstoffgewicht",
+      "description": "Reduziert das Gewicht deines Kraftstoffs, sodass du mehr Kraftstoff transportieren kannst, ohne die Masse deiner Rakete zu erhöhen."
+    },
+    "fuel_capacity": {
+      "name": "Kraftstoffkapazität",
+      "description": "Erhöht die Kraftstoffkapazität deiner Rakete, sodass du mehr Kraftstoff transportieren und weiter fahren kannst."
+    }
   }
 }

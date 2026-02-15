@@ -1,6 +1,8 @@
 import { Injectable, signal } from '@angular/core';
 import { GameSettings } from '../features/settings/models/game-settings.interface';
 import { Languages } from '../features/settings/models/languages.enum';
+import { upgradesFactory } from '../features/upgrades/factories/upgrades.factory';
+import { Upgrade } from '../features/upgrades/models/upgrade.interface';
 
 @Injectable({
   providedIn: 'root',
@@ -24,6 +26,8 @@ export class GameState {
     speed: 0,
   });
   currentRun = this._currentRun.asReadonly();
+  private _upgrades = signal<Upgrade[]>(upgradesFactory());
+  upgrades = this._upgrades.asReadonly();
 
   earnCredits(amount: number) {
     this._credits.update((current) => current + amount);
@@ -39,5 +43,13 @@ export class GameState {
 
   updateCurrentRun(newRun: Partial<any>) {
     this._currentRun.update((current) => ({ ...current, ...newRun }));
+  }
+
+  updateUpgrade(upgradeId: string, newUpgrade: Partial<Upgrade>) {
+    this._upgrades.update((current) =>
+      current.map((upgrade) =>
+        upgrade.id === upgradeId ? { ...upgrade, ...newUpgrade } : upgrade,
+      ),
+    );
   }
 }

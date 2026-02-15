@@ -5,4 +5,5 @@
 .topbar {
   display: grid;
   place-items: center;
+  padding-top: env(safe-area-inset-top);
 }
